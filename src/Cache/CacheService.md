@@ -18,10 +18,11 @@
     
     
         /**
-         * @param $mode
-         * @param $name
-         * @param string $time
-         * @param array $data
+         * 调用方法
+         * @param $mode set保存 get获取
+         * @param $name 缓存key
+         * @param string $time 缓存时间
+         * @param array $data 缓存数据
          * @return int|mixed|void
          * @throws \Psr\Cache\InvalidArgumentException
          */
@@ -39,11 +40,10 @@
         }
     
         /**
-         * cache缓存存储数据
+         * cache存储数据
          * @param $name
          * @param $time
          * @param $data
-         * @return string
          * @throws \Psr\Cache\InvalidArgumentException
          */
         private function setCache($name,$time,$data)
@@ -53,11 +53,10 @@
             $total->expiresAfter($time);
             $total->set($data);
             $cache->save($total);
-            return '保存成功';
         }
     
         /**
-         * cache 缓存查看数据
+         * cache查看数据
          * @param $name
          * @return int|mixed
          * @throws \Psr\Cache\InvalidArgumentException
