@@ -2,4 +2,4 @@
 symfony
 
 ##service
--	CacheService(src/service/CacheService.md)
+-	CacheService<src/service/CacheService.md>
